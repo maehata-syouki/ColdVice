@@ -1,0 +1,280 @@
+*{
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+}
+
+.box{
+  margin: 0;
+  padding: 0;
+
+  // グループ一覧
+  &__groups{
+      height: 800px;
+      width: 300px;
+      float: left;
+
+      // #グループ名前
+      &__name{
+        background-color: palevioletred;
+        width: 300px;
+        height: 100px;
+        border: solid 4px white;
+        border-radius: 5px;
+        padding: 0.5em 1.0em 0.5em 1.0em;
+        &__name-box{
+          background-color: purple;
+          height: 75px;
+          border-radius: 20px;
+          padding: 20px 10px;
+          justify-content: space-between;
+          position: relative;
+          display: flex;
+          &__group-name{
+            background-color: pink;
+            height: 30px;
+            width: 175px;
+            border-radius: 5px;
+            color: #ffffff;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          }
+          &__icon-box{
+            background-color: springgreen;
+            height: 30px;
+            width: 60px;
+            border-radius: 5px;
+            padding: 1.5px 0px 1px 0px;
+            position: relative;
+            &__group-icon{
+              height: 25px;
+              width: 20px;
+              background-color: red;
+              border-radius: 5px;
+              position: absolute;
+            }
+            &__image-icon{
+              background-color: blue;
+              width: 20px;
+              height: 25px;
+              border-radius: 5px;
+              position: absolute;
+              margin-left: 20px;
+            }
+            &__edit-icon{
+              background-color: red;
+              height: 25px;
+              width: 20px;
+              position: absolute;
+              margin-left: 40px;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+      // グループ名前
+      &__group{
+        background-color: aqua;
+        height: calc(100vh - 200px);
+        padding: 10px 10px 10px 10px;
+        overflow: scroll;
+        &__group-box{
+          background-color: purple;
+          height: 568px;
+          padding: 10px 25px 10px 25px;
+          &__small-box{
+            background-color: white;
+            height: 50px;
+            margin-bottom: 40px;
+            &__group-name{
+              font-size: 15px;
+              margin-bottom: 5px;
+            }
+            &__group-text{
+              font-size: 11px;
+            }
+          }
+        }
+      }
+      // カレントユーザー
+      &__myname{
+        background-color: orange;
+        height: 110px;
+        padding: 5px 10px 5px 10px;
+        &__myname-box{
+          background-color: chocolate;
+          height: 91px;
+          padding: 33px 10px;
+          justify-content: space-between;
+          display: flex;
+
+          &__name{
+            background-color: brown;
+            height: 30px;
+            width: 175px;
+          }
+          &__icon-box{
+            background-color: #ffffff;
+            height: 30px;
+            width: 60px;
+            position: relative;
+            &__setting-icon{
+              background-color: blue;
+              height: 30px;
+              width: 30px;
+              position: absolute;
+            }
+            &__image-icon{
+              background-color: red;
+              height: 30px;
+              width: 30px;
+              margin-left: 30px;
+              position: absolute;
+            }
+          }
+        }
+      }
+  }
+
+  // メッセージ
+  &__messages{
+    float: left;
+    width: calc(100vw - 600px);
+    height: 800px;
+
+    // メッセージメイン
+    &__message{
+      background-color: darkorange;
+      height: calc(100vh - 100px);
+      width: 100%;
+      border: solid 4px rgb(133, 19, 179);
+      padding: 0.5em 1em 0.5em 1em;
+      &__message-box{
+        background-color: brown;
+        height: 665px;
+        padding: 20px 25px;
+        overflow: scroll;
+        &__small-box{
+          padding-bottom: 40px;
+          background-color: white;
+          &__info{
+            display: flex;
+            margin-bottom: 10px;
+            &__name{
+              color: black;
+              font-size: 15px;
+              font-weight: bold;
+            }
+            &__date{
+              color: black;
+              font-size: 15px;
+              margin-left: 10px;
+            }
+          }
+          &__text{
+            color: red;
+            font-size: 14px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    // フォーム
+    &__form{
+      background-color: paleturquoise;
+      height: 100px;
+      padding: 10px 10px 10px 10px;
+      &__form-box{
+        background-color: brown;
+        height: 665px;
+        padding: 10px 10px;
+        padding-top: 25px;
+        display: flex;
+        &__form-small{
+          background-color: white;
+          height: 50px;
+          width: 700px;
+          color: black;
+          position: relative;
+        }
+        &__icon-box{
+          background-color: yellow;
+          height: 50px;
+          width: 50px;
+          position: absolute;
+          margin-left: 650px;
+          padding: 5px 5px 5px 5px;
+          &__icon{
+            background-color: pink;
+            height: 40px;
+            width: 40px;
+          }
+        }
+        &__send-box{
+          background-color: black;
+          height: 50px;
+          width: 100px;
+          color: bisque;
+        }
+      }
+    }
+  }
+
+  // メンバーサイドバー
+  &__members{
+    width: 300px;
+    height: 800px;
+    float: right;
+
+    // メンバーリスト
+    &__member{
+      background-color: beige;
+      height: 90px;
+      &__member-box{
+        background-color: green;
+        height: 90px;
+        padding-top: 20px;
+        &__main{
+          background: -moz-linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
+          background: -webkit-linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
+          background: linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
+          margin-left: 10px;
+          margin-right: 10px;
+          width: 280px;
+          height: 50px;
+          font-size: 40px;
+          font-family: inherit;
+          color: slateblue;
+          border-radius: 5px;
+        }
+
+      }
+    }
+
+    // メンバーリスト下
+    &__list{
+      background-color: darkturquoise;
+      height: calc(100vh - 50px);
+      padding: 10px 5px 15px 5px;
+      &__list-box{
+        background-color: slateblue;
+        height: 685px;
+        padding: 5px 7.5px 5px 7.5px;
+        overflow: scroll;
+        &__member-box{
+          background-color: #ffffff;
+          height: 50px;
+          width: 275px;
+          &__name{
+            font-size: 15px;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
