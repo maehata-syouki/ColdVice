@@ -4,8 +4,8 @@
 }
 
 body{
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   position: fixed;
 }
 
@@ -24,9 +24,8 @@ body{
         background-color: palevioletred;
         width: 300px;
         height: 100px;
-        border: solid 4px white;
-        border-radius: 5px;
-        padding: 0.5em 1.0em 0.5em 1.0em;
+        border: solid 3.5px black;
+        padding: 0.5em 1.0em 0em 1.0em;
         &__name-box{
           background-color: purple;
           height: 75px;
@@ -34,88 +33,105 @@ body{
           padding: 20px 10px;
           justify-content: space-between;
           position: relative;
+          border: solid 3px white;
           display: flex;
           &__group-name{
             background-color: pink;
+            border: solid 3px white;
             height: 30px;
             width: 175px;
             border-radius: 5px;
-            color: #ffffff;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: black;
+            padding: 3px 5px;
+            font-family: "Nico Moji";
+            font-family: 'Arial Black';
           }
           &__icon-box{
-            background-color: springgreen;
-            height: 30px;
-            width: 60px;
-            border-radius: 5px;
-            padding: 1.5px 0px 1px 0px;
+            background-color: #ffffff;
+            width: 54px;
             position: relative;
             &__group-icon{
-              height: 25px;
-              width: 20px;
-              background-color: red;
+              background-color: black;
+              color: red;
+              height: 28px;
+              width: 27px;
               border-radius: 5px;
+              padding: 2px 6px;
               position: absolute;
+              border: solid 1px white;
+              margin-left: 1px;
             }
             &__image-icon{
-              background-color: blue;
-              width: 20px;
-              height: 25px;
+              background-color: black;
+              color: red;
+              height: 28px;
+              width: 27px;
               border-radius: 5px;
+              padding: 1.5px 4px;
               position: absolute;
-              margin-left: 20px;
-            }
-            &__edit-icon{
-              background-color: red;
-              height: 25px;
-              width: 20px;
-              position: absolute;
-              margin-left: 40px;
-              border-radius: 5px;
+              border: solid 1px white;
+              margin-left: 27px;
             }
           }
         }
       }
       // グループ名前
       &__group{
-        background-color: aqua;
+        background-color: palevioletred;
         height: calc(100vh - 200px);
         padding: 10px 10px 10px 10px;
         overflow: scroll;
+        border: solid 3.5px black;
         &__group-box{
           background-color: purple;
           height: 568px;
           padding: 10px 25px 10px 25px;
+          border: solid 3px white;
+          border-radius: 10px;
           &__small-box{
             background-color: white;
             height: 50px;
             margin-bottom: 40px;
+            border-radius: 4px;
+            border: solid 3px pink;
+            padding-left: 5px;
             &__group-name{
-              font-size: 15px;
+              font-size: 19px;
               margin-bottom: 5px;
+              font-family: 'American Typewriter';
+              font-family: 'Wawati SC'
             }
             &__group-text{
               font-size: 11px;
+              font-family: 'American Typewriter';
             }
           }
         }
       }
       // カレントユーザー
       &__myname{
-        background-color: orange;
+        background-color: palevioletred;
         height: 110px;
-        padding: 5px 10px 5px 10px;
+        padding: 5px 10px 10px 10px;
+        border: solid 5px black;
         &__myname-box{
-          background-color: chocolate;
+          background-color: purple;
+          border-radius: 20px;
           height: 91px;
           padding: 33px 10px;
           justify-content: space-between;
           display: flex;
+          border: solid 3px white;
 
           &__name{
-            background-color: brown;
+            background-color: pink;
             height: 30px;
             width: 175px;
+            border-radius: 3px;
+            border: solid 3px white;
+            font-family: "Nico Moji";
+            font-family: 'Arial Black';
+
           }
           &__icon-box{
             background-color: #ffffff;
@@ -123,17 +139,25 @@ body{
             width: 60px;
             position: relative;
             &__setting-icon{
-              background-color: blue;
+              background-color: black;
+              color: red;
               height: 30px;
               width: 30px;
+              border-radius: 5px;
+              padding: 2px 6px;
               position: absolute;
+              border: solid 1px white;
             }
             &__image-icon{
-              background-color: red;
+              background-color: black;
+              color: red;
               height: 30px;
               width: 30px;
+              padding: 2px 7px;
               margin-left: 30px;
               position: absolute;
+              border-radius: 5px;
+              border: solid 1px white;
             }
           }
         }
@@ -148,19 +172,21 @@ body{
 
     // メッセージメイン
     &__message{
-      background-color: darkorange;
+      background-color: palevioletred;
       height: calc(100vh - 100px);
       width: 100%;
-      border: solid 4px rgb(133, 19, 179);
+      border: solid 5px rgb(0, 0, 0);
       padding: 0.5em 1em 0.5em 1em;
       &__message-box{
-        background-color: brown;
-        height: 665px;
+        background-color: purple;
+        border: solid 3px white;
+        height: 640px;
         padding: 20px 25px;
         overflow: scroll;
         &__small-box{
           padding-bottom: 40px;
           background-color: white;
+          border: solid 5px pink;
           &__info{
             display: flex;
             margin-bottom: 10px;
@@ -168,28 +194,41 @@ body{
               color: black;
               font-size: 15px;
               font-weight: bold;
+              font-family: "Wawati SC";
             }
             &__date{
               color: black;
               font-size: 15px;
               margin-left: 10px;
+              font-family: "Wawati SC";
             }
           }
           &__text{
             color: red;
             font-size: 14px;
             margin-bottom: 10px;
+            font-family: "Wawati SC";
           }
         }
+      }
+      &__edit-btn{
+        background-color: purple;
+        height: 30px;
+        padding: 1px 175px;
+        color: skyblue;
+        font-family: 'Arial Black';
+        border: solid 3px white;
+        // width: 100px;
       }
     }
     // フォーム
     &__form{
-      background-color: paleturquoise;
+      background-color: palevioletred;
       height: 100px;
       padding: 10px 10px 10px 10px;
       &__form-box{
         background-color: brown;
+        border: solid 3px white;
         height: 665px;
         padding: 10px 10px;
         padding-top: 25px;
@@ -199,26 +238,34 @@ body{
           height: 50px;
           width: 700px;
           color: black;
+          border: solid 3px black;
           position: relative;
+          justify-content: space-between;
         }
         &__icon-box{
-          background-color: yellow;
+          background-color: black;
           height: 50px;
-          width: 50px;
+          width: 45px;
           position: absolute;
-          margin-left: 650px;
-          padding: 5px 5px 5px 5px;
+          // margin-left: 650px;
+          // top: 10px;
+          right: 425px;
+          padding: 5px 10px 2px 3px;
           &__icon{
             background-color: pink;
             height: 40px;
             width: 40px;
+            padding: 7px 2px 10px 12px;
           }
         }
         &__send-box{
-          background-color: black;
+          background-color: purple;
           height: 50px;
           width: 100px;
-          color: bisque;
+          color: white;
+          padding: 10px 25px;
+          border: solid 3px black;
+          font-family: 'Arial Black';
         }
       }
     }
@@ -232,24 +279,26 @@ body{
 
     // メンバーリスト
     &__member{
-      background-color: beige;
-      height: 90px;
       &__member-box{
-        background-color: green;
+        background-color: palevioletred;
+        border: solid 4px black;
         height: 90px;
         padding-top: 20px;
         &__main{
-          background: -moz-linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
-          background: -webkit-linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
-          background: linear-gradient(to bottom,#FFF,#FFC778 30%,#F89174);
+          background-color: purple;
+          border: solid 4px white;
+          border-radius: 5px;
           margin-left: 10px;
           margin-right: 10px;
           width: 280px;
           height: 50px;
-          font-size: 40px;
-          font-family: inherit;
-          color: slateblue;
+          font-size: 20px;
+          font-family: 'Arial Black';
+          color: white;
           border-radius: 5px;
+          padding: 5px 5px;
+          // text-shadow: 7px 4px 7px white;
+          color: pink;
         }
 
       }
@@ -257,21 +306,29 @@ body{
 
     // メンバーリスト下
     &__list{
-      background-color: darkturquoise;
+      background-color: palevioletred;
+      border: solid 4px black;
       height: calc(100vh - 50px);
       padding: 10px 5px 15px 5px;
       &__list-box{
-        background-color: slateblue;
+        background-color: purple;
+        border: solid 4px white;
+        border-radius: 2px;
         height: 685px;
         padding: 5px 7.5px 5px 7.5px;
         overflow: scroll;
         &__member-box{
           background-color: #ffffff;
-          height: 50px;
-          width: 275px;
+          border: solid 4px pink;
+          border-radius: 2px;
+          height: 45px;
+          width: 260px;
+          padding-left: 5px;
           &__name{
-            font-size: 15px;
+            font-size: 30px;
             margin-bottom: 5px;
+            font-family: 'Arial Black';
+            font-family: 'Wawati SC'
           }
         }
       }
